@@ -5,11 +5,12 @@
 **100 essential system design questions — with concise answers and diagrams.**
 
 ![Questions](https://img.shields.io/badge/questions-100-blue?style=for-the-badge)
-![Diagrams](https://img.shields.io/badge/diagrams-included-success?style=for-the-badge)
+![Diagrams](https://img.shields.io/badge/diagrams-Mermaid-success?style=for-the-badge)
+![Deep dives](https://img.shields.io/badge/deep%20dives-10-orange?style=for-the-badge)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge)
 
-[Start learning](#-roadmap) · [Question index](#-question-index) · [How to answer](docs/how-to-answer.md) · [Contribute](CONTRIBUTING.md)
+[Start learning](#-roadmap) · [Deep dives](#-deep-dives) · [Question index](#-question-index) · [How to answer](docs/how-to-answer.md) · [Contribute](CONTRIBUTING.md)
 
 </div>
 
@@ -49,6 +50,25 @@ flowchart LR
 
 More in [docs/how-to-answer.md](docs/how-to-answer.md).
 
+## 🔥 Deep dives
+
+Full walkthroughs of the 10 most-asked designs: requirements, estimates, APIs, data model, architecture diagram and trade-offs.
+
+<!-- DEEP:START -->
+| # | Deep dive |
+|--:|:--|
+| 1 | [URL Shortener (TinyURL)](docs/deep-dives/01-url-shortener.md) |
+| 2 | [Rate Limiter](docs/deep-dives/02-rate-limiter.md) |
+| 3 | [News Feed](docs/deep-dives/03-news-feed.md) |
+| 4 | [Chat System (WhatsApp / Messenger)](docs/deep-dives/04-chat-system.md) |
+| 5 | [Notification System](docs/deep-dives/05-notification-system.md) |
+| 6 | [Video Streaming (YouTube / Netflix)](docs/deep-dives/06-video-streaming.md) |
+| 7 | [Ride Hailing (Uber)](docs/deep-dives/07-ride-hailing.md) |
+| 8 | [File Storage and Sync (Google Drive / Dropbox)](docs/deep-dives/08-file-storage-sync.md) |
+| 9 | [Ticket Booking (Ticketmaster)](docs/deep-dives/09-ticket-booking.md) |
+| 10 | [Payment System](docs/deep-dives/10-payment-system.md) |
+<!-- DEEP:END -->
+
 ## 📚 Question index
 
 <!-- INDEX:START -->
@@ -71,7 +91,7 @@ More in [docs/how-to-answer.md](docs/how-to-answer.md).
 | 13 | [B-tree vs LSM-tree storage engines?](docs/01-fundamentals/013-b-tree-vs-lsm-tree-storage-engines.md) |
 | 14 | [What is a CDN?](docs/01-fundamentals/014-what-is-a-cdn.md) |
 | 15 | [What is an API gateway?](docs/01-fundamentals/015-what-is-an-api-gateway.md) |
-| 16 | [How do you design a rate limiter?](docs/01-fundamentals/016-how-do-you-design-a-rate-limiter.md) |
+| 16 | [How do you design a rate limiter?](docs/01-fundamentals/016-how-do-you-design-a-rate-limiter.md) 📘 |
 | 17 | [Message queues: why and when?](docs/01-fundamentals/017-message-queues-why-and-when.md) |
 | 18 | [Kafka vs RabbitMQ / SQS?](docs/01-fundamentals/018-kafka-vs-rabbitmq-sqs.md) |
 | 19 | [Pub/Sub vs point-to-point?](docs/01-fundamentals/019-pub-sub-vs-point-to-point.md) |
@@ -91,28 +111,28 @@ More in [docs/how-to-answer.md](docs/how-to-answer.md).
 
 | # | Question |
 |--:|:--|
-| 31 | [Design a URL shortener (TinyURL).](docs/02-classic-designs/031-design-a-url-shortener-tinyurl.md) |
+| 31 | [Design a URL shortener (TinyURL).](docs/02-classic-designs/031-design-a-url-shortener-tinyurl.md) 📘 |
 | 32 | [Design Pastebin.](docs/02-classic-designs/032-design-pastebin.md) |
 | 33 | [Design a distributed key-value store (Dynamo-style).](docs/02-classic-designs/033-design-a-distributed-key-value-store-dynamo-style.md) |
 | 34 | [Design a unique ID generator.](docs/02-classic-designs/034-design-a-unique-id-generator.md) |
 | 35 | [Design a web crawler.](docs/02-classic-designs/035-design-a-web-crawler.md) |
-| 36 | [Design a notification system (push/SMS/email).](docs/02-classic-designs/036-design-a-notification-system-push-sms-email.md) |
-| 37 | [Design a news feed (Facebook/Twitter timeline).](docs/02-classic-designs/037-design-a-news-feed-facebook-twitter-timeline.md) |
+| 36 | [Design a notification system (push/SMS/email).](docs/02-classic-designs/036-design-a-notification-system-push-sms-email.md) 📘 |
+| 37 | [Design a news feed (Facebook/Twitter timeline).](docs/02-classic-designs/037-design-a-news-feed-facebook-twitter-timeline.md) 📘 |
 | 38 | [Design Twitter.](docs/02-classic-designs/038-design-twitter.md) |
 | 39 | [Design Instagram.](docs/02-classic-designs/039-design-instagram.md) |
-| 40 | [Design a chat system (WhatsApp/Messenger).](docs/02-classic-designs/040-design-a-chat-system-whatsapp-messenger.md) |
+| 40 | [Design a chat system (WhatsApp/Messenger).](docs/02-classic-designs/040-design-a-chat-system-whatsapp-messenger.md) 📘 |
 | 41 | [Design group chat and presence (online status).](docs/02-classic-designs/041-design-group-chat-and-presence-online-status.md) |
 | 42 | [Design search autocomplete (typeahead).](docs/02-classic-designs/042-design-search-autocomplete-typeahead.md) |
-| 43 | [Design YouTube / Netflix (video streaming).](docs/02-classic-designs/043-design-youtube-netflix-video-streaming.md) |
-| 44 | [Design Google Drive / Dropbox.](docs/02-classic-designs/044-design-google-drive-dropbox.md) |
-| 45 | [Design Uber / ride hailing.](docs/02-classic-designs/045-design-uber-ride-hailing.md) |
+| 43 | [Design YouTube / Netflix (video streaming).](docs/02-classic-designs/043-design-youtube-netflix-video-streaming.md) 📘 |
+| 44 | [Design Google Drive / Dropbox.](docs/02-classic-designs/044-design-google-drive-dropbox.md) 📘 |
+| 45 | [Design Uber / ride hailing.](docs/02-classic-designs/045-design-uber-ride-hailing.md) 📘 |
 | 46 | [Design a proximity service (Yelp / nearby friends).](docs/02-classic-designs/046-design-a-proximity-service-yelp-nearby-friends.md) |
 | 47 | [Design Google Maps.](docs/02-classic-designs/047-design-google-maps.md) |
-| 48 | [Design a ticket booking system (Ticketmaster).](docs/02-classic-designs/048-design-a-ticket-booking-system-ticketmaster.md) |
+| 48 | [Design a ticket booking system (Ticketmaster).](docs/02-classic-designs/048-design-a-ticket-booking-system-ticketmaster.md) 📘 |
 | 49 | [Design a hotel reservation system (Airbnb/Booking).](docs/02-classic-designs/049-design-a-hotel-reservation-system-airbnb-booking.md) |
 | 50 | [Design an e-commerce platform (Amazon).](docs/02-classic-designs/050-design-an-e-commerce-platform-amazon.md) |
 | 51 | [Design a flash sale system.](docs/02-classic-designs/051-design-a-flash-sale-system.md) |
-| 52 | [Design a payment system.](docs/02-classic-designs/052-design-a-payment-system.md) |
+| 52 | [Design a payment system.](docs/02-classic-designs/052-design-a-payment-system.md) 📘 |
 | 53 | [Design a digital wallet.](docs/02-classic-designs/053-design-a-digital-wallet.md) |
 | 54 | [Design a stock exchange / order matching engine.](docs/02-classic-designs/054-design-a-stock-exchange-order-matching-engine.md) |
 | 55 | [Design a metrics/monitoring system (Prometheus/Datadog).](docs/02-classic-designs/055-design-a-metrics-monitoring-system-prometheus-datadog.md) |
@@ -166,6 +186,7 @@ More in [docs/how-to-answer.md](docs/how-to-answer.md).
 | 98 | [Multi-tenancy and data isolation (SaaS)?](docs/03-advanced-patterns/098-multi-tenancy-and-data-isolation-saas.md) |
 | 99 | [Security in system design (zero trust, encryption, secrets)?](docs/03-advanced-patterns/099-security-in-system-design-zero-trust-encryption-secrets.md) |
 | 100 | [How do you scale a system from 0 to millions of users?](docs/03-advanced-patterns/100-how-do-you-scale-a-system-from-0-to-millions-of-users.md) |
+
 <!-- INDEX:END -->
 
 ## 🤝 Contributing

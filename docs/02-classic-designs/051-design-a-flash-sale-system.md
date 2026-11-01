@@ -4,8 +4,19 @@
 
 **Answer:** Absorb spikes: CDN static, rate limit/queue at edge, pre-load stock in Redis with atomic DECR, async order creation via queue, DB write on confirmation only, overselling prevention, idempotent orders, degrade non-critical features.
 
-```
-Users -> CDN/WAF -> Queue -> Redis stock DECR -> Order workers -> DB
+```mermaid
+flowchart TD
+    n0["Users"]
+    n1["CDN / WAF"]
+    n2["Queue"]
+    n3["Redis stock DECR"]
+    n4["Order workers"]
+    n5["DB"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n3 --> n4
+    n4 --> n5
 ```
 
 ---

@@ -4,9 +4,19 @@
 
 **Answer:** Agents push/pull metrics -> Kafka -> time-series DB (compression, downsampling, retention tiers); query engine; alert evaluator -> notification routing; cardinality control; dashboards.
 
-```
-Hosts -> Collector -> Kafka -> TSDB -> Query/Dashboards
-                           \-> Alert mgr
+```mermaid
+flowchart LR
+    n0["Hosts"]
+    n1["Collector"]
+    n2["Kafka"]
+    n3["Time-series DB"]
+    n4["Dashboards"]
+    n5["Alert manager"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n3 --> n4
+    n3 --> n5
 ```
 
 ---

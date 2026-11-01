@@ -4,10 +4,17 @@
 
 **Answer:** Signaling server (WebSocket) for session setup (SDP/ICE), WebRTC media; 1:1 P2P, groups use SFU (selective forwarding; scalable) vs MCU (mixing; heavy). TURN for NAT traversal, simulcast/adaptive bitrate, regional media servers.
 
-```
-A --\
-B ---> [SFU] --> subscribers     (signaling via WS)
-C --/
+```mermaid
+flowchart LR
+    n0["Participant A"]
+    n1["SFU"]
+    n2["Participant B"]
+    n3["Participant C"]
+    n4["Subscribers"]
+    n0 --> n1
+    n2 --> n1
+    n3 --> n1
+    n1 --> n4
 ```
 
 ---

@@ -4,8 +4,13 @@
 
 **Answer:** Write business data and an outbox event row in the same DB transaction; a relay (poller or CDC like Debezium) publishes to the broker. Guarantees no lost or phantom events; consumers must be idempotent.
 
-```
-Tx[ update order + insert outbox ] -> CDC -> Kafka
+```mermaid
+flowchart LR
+    n0["Transaction: update order + insert outbox"]
+    n1["CDC relay"]
+    n2["Kafka"]
+    n0 --> n1
+    n1 --> n2
 ```
 
 ---

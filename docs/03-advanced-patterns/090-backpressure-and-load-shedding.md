@@ -4,8 +4,15 @@
 
 **Answer:** Prevent overload by propagating slowness upstream: bounded queues, rate limits, reactive streams, shedding low-priority work (return 503/degrade), adaptive concurrency limits, autoscaling with warm capacity.
 
-```
-Producer -> [bounded queue] -x full -> reject/slow producer
+```mermaid
+flowchart LR
+    n0["Producer"]
+    n1["Bounded queue"]
+    n2["Consumer"]
+    n3["Full: reject or slow producer"]
+    n0 --> n1
+    n1 --> n2
+    n1 --> n3
 ```
 
 ---

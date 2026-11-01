@@ -4,8 +4,15 @@
 
 **Answer:** B-tree: in-place updates, great reads, used by Postgres/MySQL. LSM: append to memtable, flush to sorted SSTables, compaction; great write throughput, used by Cassandra/RocksDB. LSM has read/space amplification, mitigated by bloom filters.
 
-```
-Write -> WAL + Memtable -> flush -> SSTables -> compaction
+```mermaid
+flowchart LR
+    n0["Write"]
+    n1["WAL + memtable"]
+    n2["Flush to SSTable"]
+    n3["Compaction"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
 ```
 
 ---

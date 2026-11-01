@@ -4,8 +4,17 @@
 
 **Answer:** Sessions: server-side state, easy revocation. JWT: signed stateless token; short expiry + refresh tokens; revocation is hard. OAuth2/OIDC: delegated access via authorization code flow (+PKCE). Authorization via RBAC/ABAC, enforced at gateway and service.
 
-```
-User -> IdP login -> auth code -> token -> API (verify signature)
+```mermaid
+flowchart LR
+    n0["User"]
+    n1["IdP login"]
+    n2["Auth code"]
+    n3["Access token"]
+    n4["API verifies signature"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n3 --> n4
 ```
 
 ---

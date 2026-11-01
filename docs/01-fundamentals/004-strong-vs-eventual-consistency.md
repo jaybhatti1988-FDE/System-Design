@@ -4,9 +4,15 @@
 
 **Answer:** Strong: every read sees the latest write (linearizable; higher latency). Eventual: replicas converge over time (low latency, high availability). Intermediate: read-your-writes, monotonic reads, causal consistency. Pick strong for payments/inventory, eventual for feeds/likes.
 
-```
-Write -> Leader -> (async) -> Replica   read may be stale
-Write -> Leader -> (sync)  -> Replica   read always fresh
+```mermaid
+flowchart LR
+    n0["Write"]
+    n1["Leader"]
+    n2["Replica (async: may be stale)"]
+    n3["Replica (sync: always fresh)"]
+    n0 --> n1
+    n1 --> n2
+    n1 --> n3
 ```
 
 ---

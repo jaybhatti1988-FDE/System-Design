@@ -4,8 +4,13 @@
 
 **Answer:** Physical clocks drift; use logical clocks (Lamport), vector clocks for causality, hybrid logical clocks, or TrueTime-style bounded uncertainty. Order per partition via sequence numbers; avoid relying on wall-clock for correctness (use fencing tokens).
 
-```
-A:1 -> B:2 -> C:3     (Lamport: max(local, recv) + 1)
+```mermaid
+flowchart LR
+    n0["A: clock 1"]
+    n1["B: clock 2"]
+    n2["C: clock 3"]
+    n0 --> n1
+    n1 --> n2
 ```
 
 ---

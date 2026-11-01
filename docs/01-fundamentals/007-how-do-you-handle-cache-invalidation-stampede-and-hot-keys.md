@@ -4,8 +4,17 @@
 
 **Answer:** Use TTL + explicit delete on write, versioned keys, and event-driven invalidation (CDC). Stampede (thundering herd): request coalescing/locks, jittered TTL, stale-while-revalidate, pre-warming. Hot keys: local in-process cache, key replication (key#1..N), read replicas.
 
-```
-1000 misses -> [lock per key] -> 1 DB query -> fill -> 999 wait
+```mermaid
+flowchart LR
+    n0["1000 concurrent misses"]
+    n1["Per-key lock"]
+    n2["1 DB query"]
+    n3["Fill cache"]
+    n4["999 requests read cache"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n3 --> n4
 ```
 
 ---

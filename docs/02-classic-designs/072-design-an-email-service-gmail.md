@@ -4,9 +4,18 @@
 
 **Answer:** SMTP ingest -> spam/virus filter -> mailbox store (per-user partition, wide-column) + search index; IMAP/web API for reads; attachments in object store; queues for outbound with retries; SPF/DKIM/DMARC.
 
-```
-SMTP in -> Filter -> Mailbox store + Index <- API/IMAP
-Outbound queue -> SMTP out
+```mermaid
+flowchart LR
+    n0["SMTP in"]
+    n1["Spam / virus filter"]
+    n2["Mailbox store + index"]
+    n3["API / IMAP"]
+    n4["Outbound queue"]
+    n5["SMTP out"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n4 --> n5
 ```
 
 ---

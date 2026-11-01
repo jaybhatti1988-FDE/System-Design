@@ -4,11 +4,19 @@
 
 **Answer:** Store hot data in fast memory to cut latency and DB load. Layers: browser, CDN, API gateway, application (Redis/Memcached), DB buffer pool. Key concerns: eviction (LRU/LFU/TTL), invalidation, hit ratio, consistency.
 
-```
-Client -> App -> [Cache] hit -> return
-                    | miss
-                    v
-                  [DB] -> fill cache
+```mermaid
+flowchart LR
+    n0["Client"]
+    n1["App"]
+    n2["Cache"]
+    n3["Hit: return data"]
+    n4["Miss: read DB"]
+    n5["Fill cache"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n2 --> n4
+    n4 --> n5
 ```
 
 ---
